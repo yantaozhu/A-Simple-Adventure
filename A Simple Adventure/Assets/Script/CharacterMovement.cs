@@ -5,11 +5,15 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
+    BoxCollider2D collider;
     SpriteRenderer sprite;
     Animator animator;
 
     float horizontal;
-    float speed = 5.0f;
+    float speed = 5f;
+    float jumpForce = 7f;
+
+    [SerializeField] private LayerMask jumpableGround;
 
     private enum MovementState { idle, run, jump, fall }
 
@@ -17,6 +21,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        collider = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
@@ -29,11 +34,11 @@ public class CharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody2d.velocity = new Vector2(horizontal * speed, 0f);
+        rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
         
-        if(Input.GetKey("space"))
+        if(Input.GetKey("space") && IsGrounded())
         {
-            rigidbody2d.velocity = new Vector2(horizontal * speed, 10.0f);
+            rigidbody2d.velocity = new Vector2(horizontal * speed, jumpForce);
         }
 
         UpdateAnimation();
@@ -58,15 +63,20 @@ public class CharacterMovement : MonoBehaviour
             state = MovementState.idle;
         }
 
-        if (rigidbody2d.velocity.y > 0f)
+        if (rigidbody2d.velocity.y > 0.1f)
         {
             state = MovementState.jump;
         }
-        else if (rigidbody2d.velocity.y < 0f)
+        else if (rigidbody2d.velocity.y < -0.1f)
         {
             state = MovementState.fall;
         }
 
         animator.SetInteger("State", (int)state);
+    }
+
+    bool IsGrounded()
+    {
+        return Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
 }
