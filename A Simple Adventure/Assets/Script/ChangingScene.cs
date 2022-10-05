@@ -12,9 +12,10 @@ public class ChangingScene : MonoBehaviour
     
     public void CheckLevelOpen(int scene)
     {
-        int level = PersistentData.Instance.GetLevel();
-        if (scene <= level)
+        int levelComplete = PersistentData.Instance.GetLevelComplete();
+        if (scene <= (levelComplete + 1))
         {
+            PersistentData.Instance.SetCurrentLevel(scene);
             SceneManager.LoadScene("Level" + scene);
         }
     }

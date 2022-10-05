@@ -12,17 +12,11 @@ public class LevelsScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        level = PersistentData.Instance.GetLevel();
-        for (int i = 1; i < level; i++)
+        level = PersistentData.Instance.GetLevelComplete();
+        for (int i = 1; i <= level; i++)
         {
             levelScore = PersistentData.Instance.GetScore(i);
-            score[i].text = levelScore.ToString();
+            score[(i-1)].text = levelScore.ToString();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -6,8 +6,9 @@ public class PersistentData : MonoBehaviour
 {
     [SerializeField] AudioSource background;
     float backgroundVolume;
-    int level;
+    int levelComplete, currentLevel;
     int level1Score, level2Score, level3Score, level4Score;
+    int clueNumber;
 
     public static PersistentData Instance;
 
@@ -27,19 +28,33 @@ public class PersistentData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        level = 1;
+        levelComplete = 0;
+        level1Score = 0;
+        level2Score = 0;
+        level3Score = 0;
+        level4Score = 0;
         background = GetComponent<AudioSource>();
         backgroundVolume = 0.5f;
     }
 
-    public void SetLevel(int l)
+    public void SetLevelComplete(int l)
     {
-        level = l;
+        levelComplete = l;
     }
 
-    public int GetLevel()
+    public int GetLevelComplete()
     {
-        return level;
+        return levelComplete;
+    }
+
+    public void SetCurrentLevel(int l)
+    {
+        currentLevel = l;
+    }
+
+    public int GetCurrentLevel()
+    {
+        return currentLevel;
     }
 
     public void SetScore(int l, int score)
@@ -47,16 +62,28 @@ public class PersistentData : MonoBehaviour
         switch (l)
         {
             case 1:
-                level1Score = score;
+                if (score > level1Score)
+                {
+                    level1Score = score;
+                }
                 break;
             case 2:
-                level2Score = score;
+                if (score > level2Score)
+                {
+                    level2Score = score;
+                }
                 break;
             case 3:
-                level3Score = score;
+                if (score > level3Score)
+                {
+                    level3Score = score;
+                }
                 break;
             case 4:
-                level4Score = score;
+                if (score > level4Score)
+                {
+                    level4Score = score;
+                }
                 break;
             default:
                 break;
@@ -78,6 +105,16 @@ public class PersistentData : MonoBehaviour
             default:
                 return 0;
         }
+    }
+
+    public void GenerateRandomClue()
+    {
+        clueNumber = Random.Range(1, 5);
+    }
+
+    public int GetClueNumber()
+    {
+        return clueNumber;
     }
 
     public void SetVolume(float vol)
