@@ -36,37 +36,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Script/MovingPlatform.cs" />
      <Compile Include="Assets/Script/LevelsScore.cs" />
      <Compile Include="Assets/Script/PersistentData.cs" />
-     <Compile Include="Assets/Script/SpikeTrap.cs" />
      <Compile Include="Assets/Script/BackgroundMusic.cs" />
+     <Compile Include="Assets/Script/LevelAnswers/Level1Answer.cs" />
+     <Compile Include="Assets/Script/Trampoline.cs" />
      <Compile Include="Assets/Script/PauseResume.cs" />
      <Compile Include="Assets/Script/ChangingScene.cs" />
-     <Compile Include="Assets/Script/Level1Clue.cs" />
+     <Compile Include="Assets/Script/MovingSaw.cs" />
+     <Compile Include="Assets/Script/LevelClues/Level1Clue.cs" />
      <Compile Include="Assets/Script/CharacterMovement.cs" />
      <Compile Include="Assets/Script/PointSystem.cs" />
-     <Compile Include="Assets/Script/Level1Answer.cs" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
-     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
-     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
-     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
-     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
+     <Compile Include="Assets/Script/LevelClues/Level2Clue.cs" />
+     <Compile Include="Assets/Script/LevelAnswers/Level2Answer.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.27f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -646,17 +629,11 @@
     <Reference Include="PsdPlugin">
         <HintPath>/Applications/GitHub/A-Simple-Adventure/A Simple Adventure/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>/Applications/GitHub/A-Simple-Adventure/A Simple Adventure/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>/Applications/GitHub/A-Simple-Adventure/A Simple Adventure/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>/Applications/GitHub/A-Simple-Adventure/A Simple Adventure/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>/Applications/GitHub/A-Simple-Adventure/A Simple Adventure/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
         <HintPath>/Applications/GitHub/A-Simple-Adventure/A Simple Adventure/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>

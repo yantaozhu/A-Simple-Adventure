@@ -12,6 +12,8 @@ TagManager:
   - Clue
   - InputClue
   - Door
+  - Trap
+  - Trampoline
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - UI
   - Ground
   - Confinder
-  - Trap
+  - 
   - 
   - 
   - 
@@ -48,6 +50,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 3042308781
+    locked: 0
+  - name: BehindTerrain
+    uniqueID: 2365629153
     locked: 0
   - name: Default
     uniqueID: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class CharacterMovement : MonoBehaviour
 
     float horizontal;
     float speed = 5f;
-    float jumpForce = 7f;
+    float jumpForce = 8f;
+    float launchForce = 15f;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -78,5 +80,28 @@ public class CharacterMovement : MonoBehaviour
     bool IsGrounded()
     {
         return Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Trap")
+        {
+            Death();
+        }
+        if (collision.gameObject.tag == "Trampoline")
+        {
+            rigidbody2d.velocity = Vector2.up * launchForce;
+        }
+    }
+
+    void Death()
+    {
+        animator.SetTrigger("Death");
+        rigidbody2d.bodyType = RigidbodyType2D.Static;
+    }
+
+    void RestartLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 }
