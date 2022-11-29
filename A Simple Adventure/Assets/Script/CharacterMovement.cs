@@ -13,7 +13,6 @@ public class CharacterMovement : MonoBehaviour
     float horizontal;
     float speed = 5f;
     float jumpForce = 8f;
-    float launchForce = 15f;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -87,10 +86,6 @@ public class CharacterMovement : MonoBehaviour
         if (collision.gameObject.tag == "Trap")
         {
             Death();
-        }
-        if (collision.gameObject.tag == "Trampoline")
-        {
-            rigidbody2d.velocity = Vector2.up * launchForce;
         }
     }
 

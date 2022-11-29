@@ -921,7 +921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 85551232322569602, guid: 3520af6c61c0348d488fe0fa97a05733, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.95
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 85551232322569602, guid: 3520af6c61c0348d488fe0fa97a05733, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1067,8 +1067,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpikeTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 2976520380508573631, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976520380508573631, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+      propertyPath: m_AutoTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976520380508573631, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976520380508573631, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976520380508573631, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 12.037647
+      objectReference: {fileID: 0}
     - target: {fileID: 4946243051536195849, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
       propertyPath: m_Size.x
+      value: 11.979176
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947611208360363416, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
       value: 12.037647
       objectReference: {fileID: 0}
     - target: {fileID: 7350436707150419538, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
@@ -1077,11 +1101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7350436707150419538, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2805
+      value: -1.2392
       objectReference: {fileID: 0}
     - target: {fileID: 7350436707150419538, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.63
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 7350436707150419538, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3988,8 +4012,8 @@ Tilemap:
   - first: {x: 53, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3998,8 +4022,8 @@ Tilemap:
   - first: {x: 54, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6179,11 +6203,11 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 44d488bd828174832b8688ff2b8da848, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: b6eb78f3d5a8649328abf7f9cec860fb, type: 2}
-  - m_RefCount: 216
+  - m_RefCount: 214
     m_Data: {fileID: 11400000, guid: f20ca68d30ddb4d29a0802f2074986ef, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 7f14dd7f89df644268d840f7cbff88ab, type: 2}
   - m_RefCount: 34
     m_Data: {fileID: 11400000, guid: 699e3327ea8784a298400df012007fb2, type: 2}
@@ -6208,11 +6232,11 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: -1491035274662818768, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: -6401146908380638247, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  - m_RefCount: 216
+  - m_RefCount: 214
     m_Data: {fileID: 8704577166008928185, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: -1968872540364177098, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 34
     m_Data: {fileID: 313651839404696180, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
@@ -7312,7 +7336,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7336,7 +7360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075923770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7206392, y: -0.9425013, z: -10}
+  m_LocalPosition: {x: -0.21294403, y: -2.942501, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7747,12 +7771,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpikeTrap (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3611540907464984197, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+    - target: {fileID: 2976520380508573631, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 12.037647
+      value: 8.018562
       objectReference: {fileID: 0}
     - target: {fileID: 4946243051536195849, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
       propertyPath: m_Size.x
+      value: 8.018562
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947611208360363416, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
       value: 8.018562
       objectReference: {fileID: 0}
     - target: {fileID: 7350436707150419538, guid: 7c8e6429a224f4f0b8f752f9bfb400dc, type: 3}
@@ -22449,7 +22477,7 @@ MonoBehaviour:
   m_Follow: {fileID: 444305421}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -22470,7 +22498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045421700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -3.95, z: -10}
+  m_LocalPosition: {x: -2, y: -4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 291285976}
@@ -22839,11 +22867,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3519868035277313158, guid: 5432c231d24e142d59a124f295d0a7d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.58
+      value: 56.5
       objectReference: {fileID: 0}
     - target: {fileID: 3519868035277313158, guid: 5432c231d24e142d59a124f295d0a7d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.02
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3519868035277313158, guid: 5432c231d24e142d59a124f295d0a7d5, type: 3}
       propertyPath: m_LocalPosition.z

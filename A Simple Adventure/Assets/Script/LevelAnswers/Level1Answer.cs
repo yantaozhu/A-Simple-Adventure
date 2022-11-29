@@ -26,7 +26,11 @@ public class Level1Answer : MonoBehaviour
         {
             g.SetActive(true);
         }
-        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         clueNumber = PersistentData.Instance.GetClueNumber();
         switch (clueNumber)
         {

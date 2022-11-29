@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour
 {
+    [SerializeField] float launchForce = 0f;
     Animator animator;
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class Trampoline : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * launchForce, ForceMode2D.Impulse);
             animator.SetBool("Bounce", true);
         }
     }

@@ -43,13 +43,16 @@
      <Compile Include="Assets/Script/LevelAnswers/Level1Answer.cs" />
      <Compile Include="Assets/Script/Trampoline.cs" />
      <Compile Include="Assets/Script/PauseResume.cs" />
+     <Compile Include="Assets/Script/LevelAnswers/Level3Answer.cs" />
      <Compile Include="Assets/Script/ChangingScene.cs" />
+     <Compile Include="Assets/Script/LevelAnswers/Level2Answer.cs" />
+     <Compile Include="Assets/Script/LevelClues/Level2Clue.cs" />
+     <Compile Include="Assets/Script/LevelClues/Level3Clue.cs" />
      <Compile Include="Assets/Script/MovingSaw.cs" />
      <Compile Include="Assets/Script/LevelClues/Level1Clue.cs" />
      <Compile Include="Assets/Script/CharacterMovement.cs" />
      <Compile Include="Assets/Script/PointSystem.cs" />
-     <Compile Include="Assets/Script/LevelClues/Level2Clue.cs" />
-     <Compile Include="Assets/Script/LevelAnswers/Level2Answer.cs" />
+     <Compile Include="Assets/Script/FireTrap.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.27f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
