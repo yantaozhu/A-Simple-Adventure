@@ -263,6 +263,11 @@ MonoBehaviour:
   - {fileID: 607430747}
   - {fileID: 980295050}
   - {fileID: 1029867203}
+  button:
+  - {fileID: 1004369104}
+  - {fileID: 1991027987}
+  - {fileID: 1001984954}
+  - {fileID: 1425302678}
 --- !u!1 &607430745
 GameObject:
   m_ObjectHideFlags: 0

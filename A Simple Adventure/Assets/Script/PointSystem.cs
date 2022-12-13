@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PointSystem : MonoBehaviour
 {
-    int currentScore;
+    float currentScore;
     int currentLevel;
     [SerializeField] Text scoreTxt;
 
@@ -20,6 +20,7 @@ public class PointSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentScore += Time.deltaTime;
         DisplayScore();
     }
 
@@ -27,7 +28,7 @@ public class PointSystem : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Fruit"))
         {
-            currentScore += 100;
+            currentScore -= 1f;
             Destroy(collider.gameObject);
         }
 
@@ -41,6 +42,11 @@ public class PointSystem : MonoBehaviour
 
     void DisplayScore()
     {
-        scoreTxt.text = "Score: " + currentScore;
+        string time;
+        float min, sec;
+        min = Mathf.FloorToInt(currentScore / 60);
+        sec = Mathf.FloorToInt(currentScore % 60);
+        time = string.Format("{0:00}:{1:00}", min, sec);
+        scoreTxt.text = time;
     }
 }

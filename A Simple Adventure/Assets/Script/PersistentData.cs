@@ -7,7 +7,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] AudioSource background;
     float backgroundVolume;
     int levelComplete, currentLevel;
-    int level1Score, level2Score, level3Score, level4Score;
+    float level1Score, level2Score, level3Score, level4Score;
     int clueNumber;
 
     public static PersistentData Instance;
@@ -29,17 +29,19 @@ public class PersistentData : MonoBehaviour
     void Start()
     {
         levelComplete = 0;
-        level1Score = 0;
-        level2Score = 0;
-        level3Score = 0;
-        level4Score = 0;
+        level1Score = 9999f;
+        level2Score = 9999f;
+        level3Score = 9999f;
+        level4Score = 9999f;
         background = GetComponent<AudioSource>();
         backgroundVolume = 0.5f;
     }
 
     public void SetLevelComplete(int l)
     {
-        levelComplete = l;
+        if (l > levelComplete){
+            levelComplete = l;
+        }
     }
 
     public int GetLevelComplete()
@@ -57,30 +59,30 @@ public class PersistentData : MonoBehaviour
         return currentLevel;
     }
 
-    public void SetScore(int l, int score)
+    public void SetScore(int l, float score)
     {
         switch (l)
         {
             case 1:
-                if (score > level1Score)
+                if (score < level1Score)
                 {
                     level1Score = score;
                 }
                 break;
             case 2:
-                if (score > level2Score)
+                if (score < level2Score)
                 {
                     level2Score = score;
                 }
                 break;
             case 3:
-                if (score > level3Score)
+                if (score < level3Score)
                 {
                     level3Score = score;
                 }
                 break;
             case 4:
-                if (score > level4Score)
+                if (score < level4Score)
                 {
                     level4Score = score;
                 }
@@ -90,7 +92,7 @@ public class PersistentData : MonoBehaviour
         }
     }
 
-    public int GetScore(int l)
+    public float GetScore(int l)
     {
         switch (l)
         {
@@ -103,7 +105,7 @@ public class PersistentData : MonoBehaviour
             case 4:
                 return level4Score;
             default:
-                return 0;
+                return 0f;
         }
     }
 
