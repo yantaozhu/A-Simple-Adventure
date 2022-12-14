@@ -15,6 +15,7 @@ public class ChangingScene : MonoBehaviour
         int levelComplete = PersistentData.Instance.GetLevelComplete();
         if (scene <= (levelComplete + 1))
         {
+            Time.timeScale = 1.0f;
             PersistentData.Instance.SetCurrentLevel(scene);
             SceneManager.LoadScene("Level" + scene);
         }

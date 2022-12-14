@@ -33,8 +33,9 @@ public class PersistentData : MonoBehaviour
         level2Score = 9999f;
         level3Score = 9999f;
         level4Score = 9999f;
+        backgroundVolume = 0.1f;
         background = GetComponent<AudioSource>();
-        backgroundVolume = 0.5f;
+        background.volume = backgroundVolume;
     }
 
     public void SetLevelComplete(int l)
@@ -123,5 +124,10 @@ public class PersistentData : MonoBehaviour
     {
         backgroundVolume = vol;
         background.volume = backgroundVolume;
+    }
+
+    public float GetVolume()
+    {
+        return backgroundVolume;
     }
 }
